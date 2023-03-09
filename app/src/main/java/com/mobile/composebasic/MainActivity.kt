@@ -20,6 +20,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import androidx.compose.foundation.lazy.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
@@ -117,11 +118,12 @@ fun UsersList() {
     BottomSheetScaffold(
         scaffoldState = bottomSheetScaffoldState,
         sheetPeekHeight = 0.dp,
+        sheetShape = RoundedCornerShape(16.dp),
         sheetContent = { // Content of the bottom sheet
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(500.dp)
+                    .height(450.dp)
                     .background(Color.LightGray),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
